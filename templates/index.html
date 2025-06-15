@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>ISBN Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pengecek ISBN-13</h1>
+        <form method="POST">
+            <input type="text" name="isbn" placeholder="Masukkan ISBN-13" required>
+            <button type="submit">Cek</button>
+        </form>
+
+        {% if hasil %}
+            <div class="result">{{ hasil }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
